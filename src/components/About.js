@@ -49,13 +49,13 @@ function About() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="Large" color="primary">
+                    <Button  size="Large" color="primary" target="_blank" href="https://github.com/Anitha-Venkatesan">
                         GitHub
         </Button>
-                    <Button size="Large" color="primary">
+                    <Button size="Large" color="primary" target="_blank" href="https://www.linkedin.com/in/anitha-venkatesan-6aba58142/">
                         LinkedIn
         </Button>
-                    <Button size="Large" color="primary">
+                    <Button size="Large" color="primary" target="_blank" href="https://anitha-venkatesan.github.io/anitha-portfolio/assets/docs/resume.pdf">
                         Resume
         </Button>
                 </CardActions>
