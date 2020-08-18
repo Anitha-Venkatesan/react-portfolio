@@ -24,7 +24,7 @@ function Navbar() {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h5" className={classes.title}>
               Anitha Venkatesan
             </Typography>
             <Link href="/" color="inherit"></Link>
