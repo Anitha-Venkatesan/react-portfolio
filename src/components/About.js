@@ -9,6 +9,7 @@ import {
     Button,
     makeStyles
 } from "@material-ui/core";
+import ScrollableTabsButtonAuto from './Projects';
 
 const useStyles = makeStyles({
     root: {
@@ -17,10 +18,13 @@ const useStyles = makeStyles({
         marginRight: 'auto',
         marginTop: "50px"
     },
-    Media: {
-
-        width: '100%',
-        objectFit: 'cover'
+    Media: { 
+        objectFit: 'cover',
+        width:"30%",
+        height:"30%",
+        marginLeft:"auto",
+        marginRight:"auto",
+        textAlign:"center"
     }
 });
 
@@ -30,13 +34,15 @@ function About() {
     return (
         <div>
             <Card className={classes.root}>
-                <CardActionArea>
-                    <CardMedia className={classes.Media}
-                        component="img"
-                        alt="Profile-Picture"
-                        image="images/profile.jpg"
-                        title="Anitha Venkatesan"
-                    />
+                    <div>
+                        <CardMedia className={classes.Media}
+                            component="img"
+                            alt="Profile-Picture"
+                            image="images/profile.jpg"
+                            title="Anitha Venkatesan"
+                        />
+                    </div>
+
                     <CardContent>
                         <Typography gutterBottom variant="h5" color="textPrimary" component="p">
                             Hello, I am Anitha Venkatesan - Full stack developer passionate about developing web apps,
@@ -47,7 +53,7 @@ function About() {
                             in Symantec and also I worked as an intern in Renault.
           </Typography>
                     </CardContent>
-                </CardActionArea>
+                <CardActionArea>
                 <CardActions>
                     <Button  size="Large" color="primary" target="_blank" href="https://github.com/Anitha-Venkatesan">
                         GitHub
@@ -59,6 +65,7 @@ function About() {
                         Resume
         </Button>
                 </CardActions>
+                </CardActionArea>
             </Card>
         </div>
     );
