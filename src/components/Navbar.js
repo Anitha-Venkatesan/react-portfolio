@@ -1,33 +1,41 @@
 import React from 'react';
-//import { AppBar,Toolbar ,Typography,Button} from '@material-ui/core';
-import { Layout ,Navigation,Header,Drawer,Content }from 'react-mdl';
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    makeStyles,
+    Link
+} from "@material-ui/core";
+
+
+const useStyles = makeStyles({
+    root: {
+      flexGrow: 1,
+    },
+    title: {
+      flexGrow: 1,
+    },
+  });
 
 function Navbar() {
-  return (
-    <div className="demo-big-content">
-    <Layout>
-        <Header title="Anitha Venkatesan" scroll>
-            <Navigation>
-                <a href ="/"> </a>
-                <a href="/about">About</a>
-                <a href="/projects">Projects</a>
-                <a href="/Contact">Contact</a>
-            </Navigation>
-        </Header>
-        <Drawer title="Title">
-            <Navigation>
-                <a href="/">About</a>
-                <a href="/">Projects</a>
-                <a href="/">Contact</a>
-            </Navigation>
-        </Drawer>
-        <Content>
-            <div className="page-content" />
-        </Content>
-    </Layout>
-</div>
-      );
-   
+    const classes = useStyles();
+
+    return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" className={classes.title}>
+              Anitha Venkatesan
+            </Typography>
+            <Link href="/" color="inherit"></Link>
+            <Link href="/about" color="inherit">About</Link>
+            <Link href="/projects" color="inherit">Projects</Link>
+            <Link href="/contact" color="inherit">Contact</Link>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+
 }
 
 export default Navbar;
