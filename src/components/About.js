@@ -9,7 +9,7 @@ import {
     Button,
     makeStyles
 } from "@material-ui/core";
-import ScrollableTabsButtonAuto from './Projects';
+//import ScrollableTabsButtonAuto from './Projects';
 
 const useStyles = makeStyles({
     root: {

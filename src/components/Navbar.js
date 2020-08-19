@@ -15,6 +15,9 @@ const useStyles = makeStyles({
     title: {
       flexGrow: 1,
     },
+    spacing: {
+        paddingRight: "10px"
+    }
   });
 
 function Navbar() {
@@ -24,13 +27,13 @@ function Navbar() {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h5" className={classes.title}>
-              Anitha Venkatesan
+            <Typography variant="h4" className={classes.title}>
+            <Link href="/" className={classes.spacing} variant="h5" color="inherit">Anitha Venkatesan</Link>
             </Typography>
-            <Link href="/" color="inherit"></Link>
-            <Link href="/about" color="inherit">About</Link>
-            <Link href="/projects" color="inherit">Projects</Link>
-            <Link href="/contact" color="inherit">Contact</Link>
+            <Link href="/" className={classes.spacing} variant="h6" color="inherit"></Link>
+            <Link href="/about" className={classes.spacing} variant="h6" color="inherit">About</Link>
+            <Link href="/projects" className={classes.spacing} variant="h6" color="inherit">Projects</Link>
+            <Link href="/contact" variant="h6" color="inherit">Contact</Link>
           </Toolbar>
         </AppBar>
       </div>
