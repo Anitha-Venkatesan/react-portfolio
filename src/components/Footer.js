@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 function FooterComponent() {
     const classes = useStyles();
     return (
-        <footer className={classes.root}>Anitha Venkatesan</footer>
+        <footer className={classes.root}>React Portfolio By Anitha Venkatesan</footer>
     )
 
 }

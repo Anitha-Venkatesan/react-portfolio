@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography, Link, makeStyles } from '@material-ui/core';
+import { Card, CardMedia, CardContent, Typography, Link, makeStyles, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
@@ -43,7 +43,7 @@ function Project(props) {
             </CardContent>
             <Link target="_blank" href={props.project.GitHub} className={classes.spacingLeft} variant="h6" color="inherit">GitHub</Link>
             {props.project.Demo && <Link target="_blank" href={props.project.Demo} className={classes.spacingLeft} variant="h6" color="inherit">Demo</Link>}
-        </Card>
+        </Card>   
     </div>
 }
 

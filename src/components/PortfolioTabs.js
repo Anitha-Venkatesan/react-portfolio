@@ -11,7 +11,8 @@ const useStyles = makeStyles({
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
-        marginTop: "50px",
+        marginTop: "30px",
+        fontSize: '18px',
         backgroundColor : "#a1887f"
     },
     

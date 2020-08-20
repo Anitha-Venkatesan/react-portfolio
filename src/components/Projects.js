@@ -4,6 +4,7 @@ import HtmlProjects from '../data/html-JS.json';
 import NodeProjects  from '../data/node-express.json';
 import ReactProjects from '../data/react.json';
 import PortfolioTabs from './PortfolioTabs';
+import { Grid } from '@material-ui/core';
 
 function Projects() {
     const [currentTab, setCurrentTab] = React.useState(0);
@@ -13,21 +14,24 @@ function Projects() {
             <PortfolioTabs  
                 currentTab={currentTab} 
                 setCurrentTab={setCurrentTab} />
-            {currentTab === 0 && <div value={currentTab}>
-                {HtmlProjects.map((project) => {
-                    return <Project project={project} />;
+            <Grid container>
+                {currentTab === 0 && HtmlProjects.map((project) => {
+                    return <Grid item xs={6}>
+                        <Project project={project} />
+                    </Grid>
                 })}
-            </div>}
-            {currentTab === 1 && <div value={currentTab}>
-                {NodeProjects.map((project) => {
-                    return <Project project={project} />;
+                {currentTab === 1 && NodeProjects.map((project) => {
+                    return <Grid item xs={6}>
+                        <Project project={project} />
+                    </Grid>
                 })}
-            </div>}
-            {currentTab === 2 && <div value={currentTab}>
-                {ReactProjects.map((project) => {
-                    return <Project project={project} />;
+                {currentTab === 2 && ReactProjects.map((project) => {
+                    return <Grid item xs={6}>
+                        <Project project={project} />
+                    </Grid>
                 })}
-            </div>}
+            </Grid>
+
         </div>
     );
 }
