@@ -11,6 +11,8 @@ import {
 const useStyles = makeStyles({
     root: {
       flexGrow: 1,
+      backgroundColor:"#a1887f"
+      
     },
     title: {
       flexGrow: 1,
@@ -25,7 +27,7 @@ function Navbar() {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar className={classes.root} position="static">
           <Toolbar>
             <Typography variant="h4" className={classes.title}>
             <Link href="/" className={classes.spacing} variant="h5" color="inherit">Anitha Venkatesan</Link>

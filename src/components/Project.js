@@ -6,26 +6,31 @@ const useStyles = makeStyles({
         maxWidth: 750,
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: "50px"
+        marginTop: "50px",
     },
     Media: {
         objectFit: 'cover',
-        width: "30%",
-        height: "30%",
+        width: "60%",
+        height: "40%",
+        paddingLeft: "140px"
 
+    },
+    spacingLeft: {
+        paddingLeft: "200px"
     }
+    
 });
 
 function Project(props) {
     const classes = useStyles()
     return <div>
-        <Card>
+        <Card className={classes.root}>
 
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    {props.project.title} - {props.project.img}
+                    {props.project.title} 
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="h6" color="textSecondary" component="p">
                     {props.project.description}
                 </Typography>
 
@@ -36,9 +41,9 @@ function Project(props) {
                 />
 
             </CardContent>
-            <Link target="_blank" href={props.project.GitHub} variant="h6" color="inherit">GitHub</Link>
+            <Link target="_blank" href={props.project.GitHub} className={classes.spacingLeft} variant="h6" color="inherit">GitHub</Link>
 
-            <Link target="_blank" href={props.project.Demo} variant="h6" color="inherit">Demo</Link>
+            <Link target="_blank" href={props.project.Demo} className={classes.spacingLeft} variant="h6" color="inherit">Demo</Link>
 
         </Card>
 

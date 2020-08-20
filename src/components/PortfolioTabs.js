@@ -2,19 +2,30 @@ import React from 'react';
 import {
     AppBar,
     Tabs,
-    Tab
+    Tab,
+    makeStyles
 } from '@material-ui/core';
+const useStyles = makeStyles({
+    root: {
+        maxWidth: 750,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: "50px",
+        backgroundColor : "#a1887f"
+    }
+})
 
 function PortfolioTabs(props) {
-    return <AppBar position="static">
+    const classes = useStyles()
+    return <AppBar className={classes.root} position="static">
         <Tabs 
             value={props.currentTab}
             onChange={(event, newValue) => {
                 props.setCurrentTab(newValue);
             }}>
-            <Tab label="HTML, CSS & Javascript" />
-            <Tab label="Node.js & Express" />
-            <Tab label="Node.js" />
+            <Tab variant="h5" label="HTML CSS Javascript" />
+            <Tab variant="h5" label="Node.js Express" />
+            <Tab variant="h5" label="React" />
         </Tabs>
     </AppBar>;
 }

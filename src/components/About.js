@@ -9,14 +9,13 @@ import {
     Button,
     makeStyles
 } from "@material-ui/core";
-//import ScrollableTabsButtonAuto from './Projects';
 
 const useStyles = makeStyles({
     root: {
         maxWidth: 750,
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: "50px"
+        marginTop: "50px",
     },
     Media: { 
         objectFit: 'cover',
@@ -25,6 +24,10 @@ const useStyles = makeStyles({
         marginLeft:"auto",
         marginRight:"auto",
         textAlign:"center"
+    },
+    LinkSpacing: {
+        paddingLeft:"250px"
+        
     }
 });
 
@@ -44,7 +47,7 @@ function About() {
                     </div>
 
                     <CardContent>
-                        <Typography gutterBottom variant="h5" color="textPrimary" component="p">
+                        <Typography gutterBottom variant="h6" color="textPrimary" component="p">
                             Hello, I am Anitha Venkatesan - Full stack developer passionate about developing web apps,
                             with a focus on mobile first design/development, commitment to meet deadlines and work as a
                             team. Skilled at writing well-designed and testable code using best practices in web development.
@@ -55,10 +58,10 @@ function About() {
                     </CardContent>
                 <CardActionArea>
                 <CardActions>
-                    <Button  size="Large" color="primary" target="_blank" href="https://github.com/Anitha-Venkatesan">
+                    <Button  size="Large" color="primary" className={classes.LinkSpacing} target="_blank" href="https://github.com/Anitha-Venkatesan">
                         GitHub
         </Button>
-                    <Button size="Large" color="primary" target="_blank" href="https://www.linkedin.com/in/anitha-venkatesan-6aba58142/">
+                    <Button size="Large" color="primary"  target="_blank" href="https://www.linkedin.com/in/anitha-venkatesan-6aba58142/">
                         LinkedIn
         </Button>
                     <Button size="Large" color="primary" target="_blank" href="https://anitha-venkatesan.github.io/anitha-portfolio/assets/docs/resume.pdf">

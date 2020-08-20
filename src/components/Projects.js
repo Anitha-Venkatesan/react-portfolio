@@ -1,6 +1,8 @@
 import React from 'react';
 import Project from './Project';
 import HtmlProjects from '../data/html-JS.json';
+import NodeProjects  from '../data/node-express.json';
+import ReactProjects from '../data/react.json';
 import PortfolioTabs from './PortfolioTabs';
 
 function Projects() {
@@ -8,7 +10,7 @@ function Projects() {
 
     return (
         <div>
-            <PortfolioTabs 
+            <PortfolioTabs  
                 currentTab={currentTab} 
                 setCurrentTab={setCurrentTab} />
             {currentTab === 0 && <div value={currentTab}>
@@ -17,12 +19,12 @@ function Projects() {
                 })}
             </div>}
             {currentTab === 1 && <div value={currentTab}>
-                {HtmlProjects.map((project) => {
+                {NodeProjects.map((project) => {
                     return <Project project={project} />;
                 })}
             </div>}
             {currentTab === 2 && <div value={currentTab}>
-                {HtmlProjects.map((project) => {
+                {ReactProjects.map((project) => {
                     return <Project project={project} />;
                 })}
             </div>}
