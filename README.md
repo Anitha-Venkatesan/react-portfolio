@@ -36,7 +36,7 @@ Note: They already included in npm package.json
 * Open employee-directory folder in Command Line Terminal then run command `npm start`
 * Runs the app in the development mode.
 * Open http://localhost:3000 to view it in the browser.
-T* he page will reload if you make edits.
+* The page will reload if you make edits.
 
 ### Deployed url
 * [Demo](https://quiet-lake-75932.herokuapp.com/)
