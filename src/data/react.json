@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "title": "Employee Directory",
+        "description":"Employee directory is a React application to view non-sensitive data about the employees.",
+        "images":"/images/employee-directory.gif",
+        "GitHub": "https://github.com/Anitha-Venkatesan/employee-directory",
+        "Demo": "https://anitha-venkatesan.github.io/employee-directory/"
+      
+    }
+    
+]

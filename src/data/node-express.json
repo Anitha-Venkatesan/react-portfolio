@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "title": "Buy the book",
+        "description":"An Online Bookstore Application using Node.js, Express, Handlebars, Sequelize and MVC pattern.",
+        "images":"/images/bookDemo.gif",
+        "GitHub": "https://github.com/Anitha-Venkatesan/buy_the_book",
+        "Demo": "https://buy-the-book.herokuapp.com/"
+      
+    }, 
+    {
+        "id": 2,
+        "title": "MVC Burger Logger",
+        "description":"A burger logger application uses MySQL, Node, Express, Handlebars and ORM follows the MVC design pattern.",
+        "images":"/images/burgerDemo.gif",
+        "GitHub": "https://github.com/Anitha-Venkatesan/MVC-burger-logger",
+        "Demo": "https://hidden-bayou-19245.herokuapp.com/"
+    }
+]
