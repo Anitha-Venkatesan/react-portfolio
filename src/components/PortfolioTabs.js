@@ -7,12 +7,14 @@ import {
 } from '@material-ui/core';
 const useStyles = makeStyles({
     root: {
-        maxWidth: 750,
+        maxWidth: 850,
         marginLeft: 'auto',
         marginRight: 'auto',
+        textAlign: 'center',
         marginTop: "50px",
         backgroundColor : "#a1887f"
-    }
+    },
+    
 })
 
 function PortfolioTabs(props) {
@@ -23,9 +25,9 @@ function PortfolioTabs(props) {
             onChange={(event, newValue) => {
                 props.setCurrentTab(newValue);
             }}>
-            <Tab variant="h5" label="HTML CSS Javascript" />
-            <Tab variant="h5" label="Node.js Express" />
-            <Tab variant="h5" label="React" />
+            <Tab  className={classes.root} label="HTML CSS Javascript" />
+            <Tab  className={classes.root} label="Node.js Express" />
+            <Tab className={classes.root} label="React" />
         </Tabs>
     </AppBar>;
 }

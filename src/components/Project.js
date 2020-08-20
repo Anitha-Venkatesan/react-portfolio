@@ -3,7 +3,7 @@ import { Card, CardMedia, CardContent, Typography, Link, makeStyles } from '@mat
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 750,
+        maxWidth: 500,
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: "50px",
@@ -12,42 +12,39 @@ const useStyles = makeStyles({
         objectFit: 'cover',
         width: "60%",
         height: "40%",
-        paddingLeft: "140px"
+        paddingLeft: "50px"
 
     },
     spacingLeft: {
-        paddingLeft: "200px"
+        paddingLeft: "100px"
+    },
+    fontSizing: {
+        fontWeight: "500"
     }
-    
+
 });
 
 function Project(props) {
     const classes = useStyles()
     return <div>
         <Card className={classes.root}>
-
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    {props.project.title} 
+                    {props.project.title}
                 </Typography>
-                <Typography variant="h6" color="textSecondary" component="p">
+                <Typography  className ={classes.fontWeight} color="textPrimary" component="p">
                     {props.project.description}
                 </Typography>
-
                 <CardMedia className={classes.Media}
                     component="img"
                     alt={props.project.title}
                     image={props.project.images}
                 />
-
             </CardContent>
             <Link target="_blank" href={props.project.GitHub} className={classes.spacingLeft} variant="h6" color="inherit">GitHub</Link>
-
-            <Link target="_blank" href={props.project.Demo} className={classes.spacingLeft} variant="h6" color="inherit">Demo</Link>
-
+            {props.project.Demo && <Link target="_blank" href={props.project.Demo} className={classes.spacingLeft} variant="h6" color="inherit">Demo</Link>}
         </Card>
-
-    </div>;
+    </div>
 }
 
 export default Project;
