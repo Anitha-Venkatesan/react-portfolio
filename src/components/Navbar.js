@@ -4,23 +4,28 @@ import {
     Toolbar,
     Typography,
     makeStyles,
-    Link
+    List,
+    ListItem
 } from "@material-ui/core";
+import { NavLink, Link } from 'react-router-dom';
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1,
-      backgroundColor:"#a1887f"
+      flexGrow: 1
       
     },
     title: {
       flexGrow: 1,
+      fontSize: theme.typography.h5.fontSize,
+      textDecoration: 'none',
+      color: theme.palette.common.white
     },
-    spacing: {
-        paddingRight: "10px"
+    links: {
+      display: 'flex',
+      flexDirection: 'row'
     }
-  });
+  }));
 
 function Navbar() {
     const classes = useStyles();
@@ -29,13 +34,24 @@ function Navbar() {
       <div className={classes.root}>
         <AppBar className={classes.root} position="static">
           <Toolbar>
-            <Typography variant="h4" className={classes.title}>
-            <Link href="/" className={classes.spacing} variant="h5" color="inherit">Anitha Venkatesan</Link>
-            </Typography>
-            <Link href="/" className={classes.spacing} variant="h6" color="inherit"></Link>
-            <Link href="/about" className={classes.spacing} variant="h6" color="inherit">About</Link>
-            <Link href="/projects" className={classes.spacing} variant="h6" color="inherit">Projects</Link>
-            <Link href="/contact" variant="h6" color="inherit">Contact</Link>
+            <Link to="/" exact className={classes.title}>
+              Anitha Venkatesan
+            </Link>
+
+            <List className={classes.links}>
+              <ListItem button component={NavLink} to="/" activeClassName="Mui-selected" exact>
+                About
+              </ListItem>
+
+              <ListItem button component={NavLink} to="/projects" activeClassName="Mui-selected">
+                Projects
+              </ListItem>
+
+              <ListItem button component={NavLink} to="/contact" activeClassName="Mui-selected">
+                Contact
+              </ListItem>
+            </List>
+
           </Toolbar>
         </AppBar>
       </div>

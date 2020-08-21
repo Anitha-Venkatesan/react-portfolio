@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography, Link, makeStyles, Grid } from '@material-ui/core';
+import { Card, CardMedia, CardContent, Typography, Box, makeStyles, Button,
+    CardActionArea, CardActions } from '@material-ui/core';
+import { GitHub, Web } from '@material-ui/icons';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 500,
         marginLeft: 'auto',
@@ -10,19 +12,11 @@ const useStyles = makeStyles({
     },
     Media: {
         objectFit: 'cover',
-        width: "60%",
         height: "40%",
-        paddingLeft: "50px"
+        marginTop: theme.spacing(1)
 
-    },
-    spacingLeft: {
-        paddingLeft: "100px"
-    },
-    fontSizing: {
-        fontWeight: "500"
     }
-
-});
+}));
 
 function Project(props) {
     const classes = useStyles()
@@ -41,8 +35,32 @@ function Project(props) {
                     image={props.project.images}
                 />
             </CardContent>
-            <Link target="_blank" href={props.project.GitHub} className={classes.spacingLeft} variant="h6" color="inherit">GitHub</Link>
-            {props.project.Demo && <Link target="_blank" href={props.project.Demo} className={classes.spacingLeft} variant="h6" color="inherit">Demo</Link>}
+            
+            <CardActionArea>
+                <CardActions>
+                    <Box m='auto'>
+                        <Box display='inline-block'>
+                            <Button
+                                startIcon={<GitHub />}
+                                href={props.project.GitHub}
+                                target="_blank"
+                            >
+                                Repository
+                            </Button>
+                        </Box>
+
+                        {props.project.Demo && <Box display='inline-block' ml={1}>
+                            <Button
+                                startIcon={<Web />}
+                                href={props.project.Demo}
+                                target="_blank"
+                            >
+                                Demo
+                            </Button>
+                        </Box>}
+                    </Box>
+                </CardActions>
+            </CardActionArea>
         </Card>   
     </div>
 }

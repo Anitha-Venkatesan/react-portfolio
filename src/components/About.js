@@ -9,6 +9,7 @@ import {
     Button,
     makeStyles
 } from "@material-ui/core";
+import { GitHub, LinkedIn, PictureAsPdf } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     root: {
@@ -47,7 +48,7 @@ function About() {
                 </div>
 
                 <CardContent>
-                    <Typography gutterBottom variant="h6" color="textPrimary" component="p">
+                    <Typography>
                         Hello, I am Anitha Venkatesan - Full stack developer passionate about developing web apps,
                         with a focus on mobile first design/development, commitment to meet deadlines and work as a
                         team. Skilled at writing well-designed and testable code using best practices in web development.
@@ -58,13 +59,23 @@ function About() {
                 </CardContent>
                 <CardActionArea>
                     <CardActions>
-                        <Button size="Large" color="primary" className={classes.LinkSpacing} target="_blank" href="https://github.com/Anitha-Venkatesan">
-                            GitHub
+                        <Button 
+                            size="Large" 
+                            className={classes.LinkSpacing} 
+                            target="_blank" href="https://github.com/Anitha-Venkatesan" 
+                            startIcon={<GitHub />}>
+                             GitHub
                         </Button>
-                        <Button size="Large" color="primary" className={classes.LinkSpacing} target="_blank" href="https://www.linkedin.com/in/anitha-venkatesan-6aba58142/">
+                        <Button size="Large" 
+                            className={classes.LinkSpacing} target="_blank" 
+                            href="https://www.linkedin.com/in/anitha-venkatesan-6aba58142/"
+                            startIcon={<LinkedIn />}>
                             LinkedIn
                         </Button>
-                        <Button size="Large" color="primary" className={classes.LinkSpacing} target="_blank" href="https://anitha-venkatesan.github.io/anitha-portfolio/assets/docs/resume.pdf">
+                        <Button size="Large" 
+                            className={classes.LinkSpacing} target="_blank" 
+                            href="https://anitha-venkatesan.github.io/anitha-portfolio/assets/docs/resume.pdf"
+                            startIcon={<PictureAsPdf />}>
                             Resume
                         </Button>
                     </CardActions>

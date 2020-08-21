@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import FooterComponent from './components/Footer';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import { Switch, Route } from "react-router-dom";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -14,11 +14,19 @@ const useStyles = makeStyles({
   }
 });
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#a1887f'
+    }
+  }
+});
+
 function App() {
   const classes = useStyles();
 
   return (
-    <div>
+    <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
         <Navbar /> 
         <Switch>
@@ -29,7 +37,7 @@ function App() {
         </Switch>
       </div>
       <FooterComponent/> 
-    </div>   
+    </MuiThemeProvider>   
   )
 }
 

@@ -7,30 +7,25 @@ import {
 } from '@material-ui/core';
 const useStyles = makeStyles({
     root: {
-        maxWidth: 850,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        textAlign: 'center',
-        marginTop: "30px",
-        fontSize: '18px',
-        backgroundColor : "#a1887f"
-    },
-    
-})
+        flexGrow: 1
+    }
+});
 
 function PortfolioTabs(props) {
     const classes = useStyles()
-    return <AppBar className={classes.root} position="static">
+    return <div className={classes.root}>
         <Tabs 
+            variant="fullWidth"
             value={props.currentTab}
+            centered
             onChange={(event, newValue) => {
                 props.setCurrentTab(newValue);
             }}>
-            <Tab  className={classes.root} label="HTML CSS Javascript" />
-            <Tab  className={classes.root} label="Node.js Express" />
-            <Tab className={classes.root} label="React" />
+            <Tab label="HTML CSS Javascript" />
+            <Tab label="Node.js Express" />
+            <Tab label="React" />
         </Tabs>
-    </AppBar>;
+    </div>;
 }
 
 export default PortfolioTabs;
