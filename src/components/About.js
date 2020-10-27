@@ -68,7 +68,7 @@ function About() {
                         </Button>
                         <Button size="Large" 
                             className={classes.LinkSpacing} target="_blank" 
-                            href="https://www.linkedin.com/in/anitha-venkatesan-6aba58142/"
+                            href="https://www.linkedin.com/in/anitha-v-6aba58142/"
                             startIcon={<LinkedIn />}>
                             LinkedIn
                         </Button>
